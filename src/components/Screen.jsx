@@ -1,9 +1,9 @@
-export default function Screen() {
+export default function Screen(props) {
     return (
     <div className="calculator-screen">
-        <div className="history">10 + 25</div>
+        <div className="history">{props.history}</div>
         <div className="current-operation">
-            35            
+            {props.currentInput}
         </div>
 
     </div>)

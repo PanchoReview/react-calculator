@@ -1,6 +1,10 @@
 export default function Button(props) {
+    const handleClick = () => {        
+        props.handleOnClick(props.value)
+    }
+
     return(
-        <button className={props.className} value={props.value}>
+        <button onClick={() => handleClick()} className={props.className} value={props.value}>
             {props.label}
         </button>
     )
